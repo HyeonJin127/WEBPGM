@@ -1,0 +1,31 @@
+body {
+    background-color: darkgray;
+    color: white;
+}
+
+#title {
+    text-align: center;
+}
+
+#nav {
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid
+}
+
+a {
+    margin: 5px;
+    text-decoration: none;
+    color: aqua;
+}
+
+#app {
+    text-align: center;
+    margin: 5px;
+}
+
+#app > a {
+    color: white;
+    text-decoration: underline;
+    font-size: 20px;
+}

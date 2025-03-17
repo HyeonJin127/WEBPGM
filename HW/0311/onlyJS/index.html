@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce</title>
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const titleDiv = document.createElement('div');
+        titleDiv.id = 'title';
+        titleDiv.innerHTML = `
+            <h1>김현진의 자기소개 페이지</h1>
+            <h3>경성대학교<br>2023864019</h3>
+        `;
+        document.body.insertBefore(titleDiv, document.getElementById('app'));
+
+        const navDiv = document.createElement('div');
+        navDiv.id = 'nav';
+        navDiv.innerHTML = `
+            <a href="#" onclick="navigate('introduce')"><strong>자기소개</strong></a>
+            <a href="#" onclick="navigate('contact')"><strong>연락처</strong></a>
+        `;
+        document.body.insertBefore(navDiv, document.getElementById('app'));
+
+        function navigate(section) {
+            const appDiv = document.getElementById('app');
+            if (section === 'introduce') {
+                appDiv.innerHTML = `<p>안녕하세요. 저는 경성대학교 소프트웨어학과 재학중인 김현진 입니다. 제가 사용할 줄 아는 언어들로는 <strong>Python</strong>, <strong>C</strong>, <strong>JAVA</strong> 가 있습니다.</p>`;
+            } else if (section === 'contact') {
+                appDiv.innerHTML = `
+                    <a href=\"mailto:guswls041207@outlook.kr\"><strong>Email</strong></a><a href=\"https://www.instagram.com/hyeonjin_1207/\"><strong>Insta</strong></a>
+                `;
+            }
+        }
+
+        navigate('introduce');
+    </script>
+</body>
+</html>
